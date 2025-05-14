@@ -1,0 +1,97 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    height: 600px;
+}
+
+h1 {
+    text-align: left;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+.submit-button {
+    display: block;
+    /* Make it a block element to take full width */
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    /* Remove underline */
+    cursor: pointer;
+}
+
+
+
+.submit-button:hover {
+    background-color: #45a049;
+    /* Darker shade on hover */
+}
+
+.signup-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.signup-link p {
+    margin: 0;
+    color: #b0b0b0;
+    /* Light gray for less emphasis */
+}
+
+.signup-link a {
+    color: #4caf50;
+    /* Green for the link */
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/*Changes Made:
+Container: Used grid layout to structure the container.
+Input Group: Used flex layout for better alignment of labels and inputs.
+Signup Link: Used flex layout to center the content.
+This version enhances the layout flexibility while maintaining the original design.*/

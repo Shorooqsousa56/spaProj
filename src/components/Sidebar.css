@@ -1,0 +1,32 @@
+.sidebar h2 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.sidebar nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .nav-link {
+    display: block;
+    padding: 15px;
+    margin: 10px;
+    font-size: 15px;
+    text-align: left;
+    border-radius: 5px;
+    background: #444;
+    color: #f9f9f9;
+    text-decoration: none;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.sidebar .nav-link:hover {
+    background: #007bff;
+}
+
+.sidebar nav a.active {
+    background-color: #027bff;
+}

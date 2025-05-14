@@ -1,0 +1,410 @@
+.main-content {
+    display: flex;
+    /* تأكد أن الصفحة تستخدم flex */
+    flex-direction: column;
+    align-items: flex-start;
+    /* تبقي العناصر بأقصى اليسار */
+    justify-content: flex-start;
+    /* تدفع العناصر للأعلى */
+    height: calc(100vh - 0px);
+    width: 100%;
+    margin-left: 10%;
+    /* لو عندك هيدر بارتفاع 60px مثلا */
+    background-color: #1e1e1e;
+    padding: 20px;
+    overflow-y: auto;
+    /* في حال كان المحتوى كبير يعطيك سكرول */
+
+}
+
+.mainheader {
+    display: flex;
+    justify-content: flex-start;
+    /* Align the header text to the left */
+    margin-top: 100px;
+    color: rgb(51, 102, 255);
+    /* Make the header full-width */
+}
+
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    /* Arrange items horizontally */
+    align-items: center;
+    gap: 10px;
+    margin-top: 0px;
+    /* Add space between header and actions */
+}
+
+.add-project {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 160px;
+    border-radius: 5px;
+
+
+}
+
+
+
+.add-project:hover {
+    background-color: #3c9aff;
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+.projects-container {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 cards per row */
+    gap: 10px;
+    margin-top: 20px;
+    justify-items: center;
+
+    /* Centers the cards within each grid cell */
+    width: 100%;
+    /* Ensure it takes up the full width of the parent container */
+
+
+}
+
+.input-Search-projects {
+    flex-grow: 1;
+    padding: 10px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 900px;
+    background-color: white;
+    color: black;
+
+
+}
+
+select {
+
+    border: none;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    background-color: white;
+
+}
+
+.actions button,
+.actions input,
+.actions select {
+    padding: 10px;
+    font-size: 14px;
+
+}
+
+.container-new-proj {
+    font-family: Arial, sans-serif;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-new-proj {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow-y: auto;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* background: rgba(0, 0, 0, 0.5);  */
+
+.modal {
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+    width: 700px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin-top: 78px;
+}
+
+/* scroll bar  */
+.modal::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+.modal::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    /* اجعل الخلفية شفافة */
+}
+
+.modal {
+    scrollbar-width: none;
+    /* يعمل على Firefox */
+}
+
+/* إخفاء شريط التمرير في Internet Explorer و Edge القديم */
+.modal {
+    -ms-overflow-style: none;
+}
+
+/* scroll bar */
+
+
+
+.close-btn {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    /* border-radius: 50%; */
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background: darkred;
+    border-radius: 6px;
+}
+
+/* h2 {
+    color: #0096FF;
+} */
+
+h2.h2-addNewProj {
+    color: #0096FF;
+}
+
+/* label {
+    display: block;
+    margin: 10px 0 5px;
+} */
+
+.label-Description,
+.label-Ending-Date,
+.label-Starting-Date,
+.label-Project-Category,
+.label-Students-List,
+.label-Project-Status,
+.label-Title {
+    display: block;
+    margin: 10px 0 5px;
+
+}
+
+
+.select-Status,
+.Select-category {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #333;
+    color: white;
+}
+
+.text-area-description {
+    width: 97.8%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #333;
+    color: white;
+}
+
+.input-title,
+.input-starting-date,
+.input-ending-date {
+    width: 97.8%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #333;
+    color: white;
+}
+
+.students-list {
+    height: 80px;
+    overflow-y: auto;
+    background: #333;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+
+
+.selected {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #218838;
+}
+
+.hidden {
+    display: none;
+}
+
+/*project cards*/
+.project-card {
+    background: #363636;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    border: 3px solid rgb(182, 182, 182);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.737);
+    color: white;
+    cursor: pointer;
+
+}
+
+.project-card h3 {
+    color: rgb(51, 102, 255);
+}
+
+
+
+.project-card:hover {
+    border: 3px solid orange;
+
+}
+
+.right-sidebar {
+    position: fixed;
+    top: 11%;
+    right: -400px;
+    width: 360px;
+    height: 100%;
+    background-color: #1e1e1e;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease-in-out;
+    padding: 0px 15px 15px 15px;
+    overflow-y: auto;
+    z-index: 9999;
+
+}
+
+.right-sidebar h2 {
+    color: rgb(68, 204, 253);
+    padding-bottom: 10px;
+    border-bottom: 2px solid #383838;
+}
+
+.right-sidebar.active {
+    right: 0;
+}
+
+/* Style for each task */
+.task-detail {
+    margin-bottom: 20px;
+    /* Space between tasks */
+    padding: 10px;
+    /* Padding inside each task */
+    border: 2px solid #0d6751;
+    /* Light border for each task */
+    border-radius: 5px;
+    /* Rounded corners */
+    background-color: #383838;
+    /* Light background color */
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    /* Slight shadow effect */
+}
+
+.disabled-btn {
+    pointer-events: none;
+    opacity: 0.5;
+    /* Optional: This makes the button look visually disabled */
+}
+
+.sidebar-overlay {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    /* Semi-transparent background */
+    z-index: 999;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+
+
+/*progress bar*/
+.progress {
+    background: #222;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 20px;
+    margin-top: 10px;
+    position: relative;
+
+}
+
+.progress-bar {
+    height: 40px;
+    background: #3c9aff;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.full {
+    width: 100%;
+}
+
+.half {
+    width: 56%;
+
+}
+
+.dates {
+    font-size: 12px;
+    color: #ffffff;
+    margin-top: 5px;
+
+}
